@@ -1,0 +1,67 @@
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp"
+    tools:context="softikoda.com.quotes.submit_quote">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/genres"
+        style="@style/editext_graybg"
+        android:entries="@array/loading"
+        android:background="@color/LightGrey"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/author"
+        android:layout_marginTop="20dp"
+        style="@style/editext_graybg"
+        android:entries="@array/loading"
+        android:background="@color/LightGrey"
+        android:layout_below="@+id/genres"
+        android:layout_centerHorizontal="true" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/author">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/quote"
+        android:hint="Enter quote"
+        android:minHeight="100dp"
+        android:layout_below="@+id/author"
+        android:layout_centerHorizontal="true" />
+</android.support.design.widget.TextInputLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:minHeight="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_below="@+id/input_layout_author"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
+</RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
